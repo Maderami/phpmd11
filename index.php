@@ -89,38 +89,39 @@ function defValue($arr1, $arr2)
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
 </header>
 <body>
-<h1>Task1</h1>
-<table class="table">
-    <thead>
+<div class="container">
+<h1 class="lead">Task1</h1>
+<table class="table w-75 text-center m-auto">
+    <thead class="table-secondary">
     <tr>
-        <td>A</td>
-        <td>B</td>
-        <td>!A</td>
-        <td>A||B</td>
-        <td>A&&B</td>
-        <td>AxorB</td>
+        <td colspan="2">A</td>
+        <td colspan="2">B</td>
+        <td colspan="2">!A</td>
+        <td colspan="2">A||B</td>
+        <td colspan="2">A&&B</td>
+        <td colspan="2">AxorB</td>
     </tr>
     </thead>
     <tbody>
     <?php for ($index = 0; $index < $GLOBALS['countArray']; $index++) { ?>
 
         <tr>
-            <td><?= $GLOBALS['A'][$index]; ?></td>
-            <td><?= $GLOBALS['B'][$index]; ?></td>
-            <td><?= $GLOBALS['resultA'][$index]; ?></td>
-            <td><?= $GLOBALS['resultorAB'][$index]; ?></td>
-            <td><?= $GLOBALS['resultandAB'][$index]; ?></td>
-            <td><?= $GLOBALS['resultxorAB'][$index]; ?></td>
+            <td colspan="2"><?= $GLOBALS['A'][$index]; ?></td>
+            <td colspan="2"><?= $GLOBALS['B'][$index]; ?></td>
+            <td colspan="2"><?= $GLOBALS['resultA'][$index]; ?></td>
+            <td colspan="2"><?= $GLOBALS['resultorAB'][$index]; ?></td>
+            <td colspan="2"><?= $GLOBALS['resultandAB'][$index]; ?></td>
+            <td colspan="2"><?= $GLOBALS['resultxorAB'][$index]; ?></td>
         </tr>
 
     <?php } ?>
     </tbody>
 </table>
-<h1>Task2</h1>
-<table class="table">
-    <thead>
+<h1 class="lead">Task2</h1>
+<table class="table w-75 text-center m-auto">
+    <thead class="table-secondary">
     <tr>
-        <td></td>
+        <td style="border-right: 1px solid black;"></td>
         <?php for ($index = 0; $index < $GLOBALS['countArrayCell']; $index++) { ?>
             <td><?= $GLOBALS['valueCell'][$index] ?></td>
         <?php } ?>
@@ -130,7 +131,7 @@ function defValue($arr1, $arr2)
     <tbody>
     <?php for ($index = 0; $index < $GLOBALS['countArrayCell']; $index++) { ?>
         <tr>
-            <td><?= $GLOBALS['valueRow'][$index] ?></td>
+            <td class="table-secondary" style="border-right: 1px solid black;"><?= $GLOBALS['valueRow'][$index] ?></td>
             <?php for ($index1 = 0; $index1 < $GLOBALS['countArrayCell']; $index1++) {
             ?>
             <td><?= $GLOBALS['resArrayIF'][$index][$index1] ?></td>
@@ -141,6 +142,7 @@ function defValue($arr1, $arr2)
     </tbody>
 
 </table>
+</div>
 </body>
 </html>
 
